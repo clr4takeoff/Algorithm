@@ -1,0 +1,19 @@
+# S4_1026_보물
+
+n = int(input())
+a = list(map(int, input().split()))
+b = list(map(int, input().split()))
+
+b_index_value_pairs = [(b[i], i) for i in range(n)]
+
+a.sort(reverse=True)
+b_index_value_pairs.sort()
+
+result = 0
+
+for i in range(n):
+    a_val = a[i]
+    b_index = b_index_value_pairs[i][1]
+    result += a_val * b[b_index]
+
+print(result)

@@ -1,0 +1,9 @@
+#B4_17010_Time to Decompress
+
+for i in range(int(input())):
+  n,s=map(str,input().split())
+  for j in range(int(n)):
+    if j != int(n)-1:
+      print(s, end="")
+    else:
+      print(s)

@@ -1,0 +1,13 @@
+#B1_1357_뒤집힌 덧셈
+
+x,y=map(str,input().split())
+
+def rev(n):
+  nli=list(str(n))
+  nli.reverse()
+  n_str="".join(nli)
+  n_int=int(n_str)
+  return n_int
+
+a=rev(x)+rev(y)
+print(rev(a))

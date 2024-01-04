@@ -1,0 +1,16 @@
+#S5_16435_스네이크버드
+N,L=map(int,input().split())
+h=list(input().split())
+
+for i in range(N):
+  h[i]=int(h[i])
+
+h.sort()
+
+for i in range(N):
+  if L>=h[i]:
+    L+=1
+  else:
+    break
+
+print(L)

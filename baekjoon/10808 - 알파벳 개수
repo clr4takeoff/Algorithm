@@ -1,0 +1,10 @@
+#B4_10808_알파벳 개수
+s=input()
+s.lower()
+p=[]
+
+for i in range(26):
+  c=s.count(chr(97+i))
+  p.append(str(c))
+
+print(" ".join(p))

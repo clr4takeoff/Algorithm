@@ -1,0 +1,23 @@
+#S4_1822_차집합
+
+na,nb=map(int,input().split())
+
+a=set(input().split())
+b=set(input().split())
+
+c=a-b
+c=list(c)
+
+for i in range(len(c)):
+  c[i]=int(c[i])
+
+c.sort()
+
+for i in range(len(c)):
+  c[i]=str(c[i])
+
+if c:
+  print(len(c))
+  print(" ".join(c))
+else:
+  print(0)

@@ -1,0 +1,18 @@
+#S5_3135_라디오
+a,b=map(int,input().split())
+n=int(input())
+p=[int(input()) for _ in range(n)]
+d={}
+
+if a==b:
+  print(1)
+else:
+  for i in range(n):
+    d[abs(b-p[i])] = p[i]
+    d1 = sorted(d.items())
+    res = abs(b-d1[0][1])+1
+
+if abs(a-b) > res:
+  print(res)
+else:
+  print(abs(a-b))

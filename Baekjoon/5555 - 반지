@@ -1,0 +1,12 @@
+#S5_5555_반지
+
+s=input()
+n=int(input())
+cnt=0
+for i in range(n):
+  st = input()
+  st+=st
+  if st.find(s) != -1:
+    cnt+=1
+
+print(cnt)

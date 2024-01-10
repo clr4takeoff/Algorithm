@@ -1,0 +1,6 @@
+#B5_26545_Mathematics
+sum=0
+for _ in range(int(input())):
+  i=int(input())
+  sum+=i
+print(sum)

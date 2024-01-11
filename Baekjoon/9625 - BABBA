@@ -1,0 +1,33 @@
+#S5_9625_BABBA
+#trial_1
+
+k=int(input())
+fi = "A"
+
+for _ in range(k):
+  a=list(fi)
+  for i in range(len(a)):
+    if a[i] == "A":
+      a[i] = "B"
+    elif a[i] == "B":
+      a[i] = "BA"
+    fi = "".join(a)
+
+print(fi.count("A"), fi.count("B"))
+
+
+
+#S5_9625_BABBA
+#trial_2
+
+k=int(input())
+ac=1
+bc=0
+tmp=0
+
+for _ in range(k):
+  tmp=ac
+  ac=bc
+  bc+=tmp
+
+print(ac, bc)

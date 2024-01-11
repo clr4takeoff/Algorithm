@@ -1,0 +1,18 @@
+#S5_25325_학생 인기도 측정
+
+popu={}
+n=int(input())
+f=list(input().split())
+for i in range(len(f)):
+  popu[f[i]]=0
+
+for _ in range(n):
+  friend = list(input().split())
+  for i in range(len(friend)):
+    popu[friend[i]] += 1
+
+res = sorted(popu.items(), key = lambda item:item[1], reverse = True)
+for i in range(len(res)):
+  a=str(res[i][0])
+  b=str(res[i][1])
+  print(a,b)

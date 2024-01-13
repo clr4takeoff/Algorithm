@@ -1,0 +1,45 @@
+#S5_10815_숫자 카드
+
+#trial_1_시간초과
+def apple():
+  li=list(input().split())
+  lis = [int(i) for i in li]
+  return lis
+
+n=int(input())
+ali=apple()
+
+m=int(input())
+bli=apple()
+
+p = [ "0" for _ in range(m) ]
+
+for i in range(len(ali)):
+  if ali[i] in bli:
+    p[bli.index(ali[i])] = "1"
+
+print(" ".join(p))
+
+
+#trial_2
+#순회 방식 대신 dictionary 이용
+#또 시간 초과였다가 한 줄 바꾸고 해결
+
+def apple():
+  return [int(i) for i in input().split()]
+
+n=int(input())
+a_li=apple()
+
+m=int(input())
+b_li=apple()
+
+b_dic={b_li[i]: i for i in range(m)}
+
+p=["0"]*m
+
+for a in a_li:
+  if a in b_dic: # if a in b_li에서 바꾸니까 시간초과 문제가 해결됨..
+    p[b_dic[a]] = "1"
+
+print(" ".join(p))

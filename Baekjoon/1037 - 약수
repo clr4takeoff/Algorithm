@@ -1,0 +1,6 @@
+#B1_1037_약수
+q = input()
+a=list(input().split())
+li = [int(i) for i in a]
+li.sort()
+print(li[0]*li[-1])

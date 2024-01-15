@@ -1,0 +1,19 @@
+#S4_12788_제 2회IUPC는 잘 개최될 수 있을까?
+
+n=int(input())
+m,k=map(int,input().split())
+a=list(map(int,input().split()))
+
+a.sort(reverse=True)
+get=0
+need=m*k
+i=0
+
+while i<n and get<need:
+  get+=a[i]
+  i+=1
+
+if get>=need:
+  print(i)
+else:
+  print("STRESS")

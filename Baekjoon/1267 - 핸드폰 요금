@@ -1,0 +1,36 @@
+# B3_1267_핸드폰 요금
+############ sol_1 ############
+
+n=int(input())
+a=list(input().split())
+yf=0
+mf=0
+for i in range(len(a)):
+  k=int(a[i])
+  yf+=((k//30)+1)*10
+  mf+=((k//60)+1)*15
+
+if yf<mf:
+  print(f"Y {yf}")
+elif mf<yf:
+  print(f"M {mf}")
+else:
+  print(f"Y M {yf}")
+
+
+
+
+
+############ sol_2 ############
+n = int(input())
+tm = list(map(int, input().split()))
+
+yf = sum(((time // 30) + 1) * 10 for time in tm)
+mf = sum(((time // 60) + 1) * 15 for time in tm)
+
+if yf < mf:
+    print(f"Y {yf}")
+elif mf < yf:
+    print(f"M {mf}")
+else:
+    print(f"Y M {yf}")

@@ -1,0 +1,43 @@
+#S2_21736_헌내기는 친구가 필요해
+#BFS
+#is_visited 배열 사용 필요성
+#dx,dy
+
+from collections import deque
+
+n,m=map(int,input().split())
+campus = [list(input().strip()) for _ in range(n)]
+is_visited=[[False]*m  for _ in range(n)]
+
+for i in range(n):
+  for j in range(m):
+    if campus[i][j] == "I":
+      xloc=i
+      yloc=j
+
+qu = deque()
+qu.appendleft((xloc,yloc))
+dx = [1, -1, 0, 0]
+dy = [0, 0, 1, -1]
+cnt=0
+
+while qu:
+  x,y = qu.popleft()
+  is_visited[x][y] = True
+
+  for i in range(4):
+    nx = x+dx[i]
+    ny = y+dy[i]
+
+    if 0<=nx<n and 0<=ny<m:
+      if campus[nx][ny] != "X" and not is_visited[nx][ny]:
+        qu.append((nx,ny))
+        is_visited[nx][ny] = True
+
+        if campus[nx][ny] == "P":
+          cnt+=1
+
+if not cnt:
+  print("TT")
+else:
+  print(cnt)

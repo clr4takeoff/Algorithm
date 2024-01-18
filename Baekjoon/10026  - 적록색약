@@ -1,0 +1,48 @@
+#G5_10026_적록색약
+
+n = int(input())
+grid = [list(input().strip()) for _ in range(n)]
+copy = [row[:] for row in grid]
+
+# 적록색약을 위한 그리드 수정
+for i in range(n):
+    for j in range(n):
+        if copy[i][j] == 'R':
+            copy[i][j] = 'G'
+
+# 반복적인 dfs 함수
+def dfs(x, y, color, grid, visited):
+    stack = [(x, y)]
+    dx = [1, -1, 0, 0]
+    dy = [0, 0, 1, -1]
+
+    while stack:
+        x, y = stack.pop()
+        if visited[x][y]:
+            continue
+        visited[x][y] = True
+
+        for i in range(4):
+            nx, ny = x + dx[i], y + dy[i]
+            if 0 <= nx < n and 0 <= ny < n and not visited[nx][ny] and grid[nx][ny] == color:
+                stack.append((nx, ny))
+
+# 적록색약 아닌 사람
+visited = [[False] * n for _ in range(n)]
+nbc = 0
+for i in range(n):
+    for j in range(n):
+        if not visited[i][j]:
+            dfs(i, j, grid[i][j], grid, visited)
+            nbc += 1
+
+# 적록색약인 사람
+visited = [[False] * n for _ in range(n)]
+bc = 0
+for i in range(n):
+    for j in range(n):
+        if not visited[i][j]:
+            dfs(i, j, copy[i][j], copy, visited)
+            bc += 1
+
+print(nbc, bc)

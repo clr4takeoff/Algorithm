@@ -1,0 +1,20 @@
+#S5_4158_CD
+
+import sys
+
+while True:
+    a, b = map(int, sys.stdin.readline().split())
+    if a == 0 and b == 0:
+        break
+
+    aa = set()
+    bb = set()
+
+    for _ in range(a):
+        aa.add(sys.stdin.readline().strip())
+
+    for _ in range(b):
+        bb.add(sys.stdin.readline().strip())
+
+    intersection = aa & bb
+    print(len(intersection))

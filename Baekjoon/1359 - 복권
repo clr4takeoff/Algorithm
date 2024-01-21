@@ -1,0 +1,12 @@
+#S4_1359_복권
+from itertools import combinations
+from math import comb
+
+n,m,k=map(int,input().split())
+c=comb(n,m)
+wc=0
+for i in range(k, m+1):
+    mc=comb(m,i)*comb(n-m,m-i)
+    wc+=mc
+
+print(wc/c)

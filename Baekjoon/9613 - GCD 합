@@ -1,0 +1,17 @@
+#S4_9613_GCD 합
+import itertools
+import math
+
+for _ in range(int(input())):
+  arr=list(map(int,input().split()))
+  n=arr[0]
+  arr.remove(arr[0])
+  nCr=list(itertools.combinations(arr,2))
+  sum=0
+
+  for i in range(len(nCr)):
+    nCr[i]=list(nCr[i])
+    if len(nCr[i])>1:
+      sum+=math.gcd(*nCr[i])
+
+  print(sum)  

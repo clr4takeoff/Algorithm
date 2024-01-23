@@ -1,0 +1,35 @@
+# 2024.01.24. Wed
+#S2_1012_유기농 배추
+#dfs 구현
+
+def dfs(y, x):
+    stack = [(y, x)]
+    while stack:
+        y, x = stack.pop()
+        if 0 <= y < n and 0 <= x < m and cab[y][x] == 1 and not visited[y][x]:
+            visited[y][x] = True
+            for i in range(4):
+                ny, nx = y + dy[i], x + dx[i]
+                stack.append((ny, nx))
+
+t = int(input())
+for _ in range(t):
+    n, m, k = map(int, input().split())
+    cab = [[0 for _ in range(m)] for _ in range(n)]
+    visited = [[False for _ in range(m)] for _ in range(n)]
+
+    dx = [1, -1, 0, 0]
+    dy = [0, 0, 1, -1]
+
+    for _ in range(k):
+        y, x = map(int, input().split())
+        cab[y][x] = 1
+
+    worm = 0
+    for row in range(n):
+        for col in range(m):
+            if cab[row][col] == 1 and not visited[row][col]:
+                dfs(row, col)
+                worm += 1
+
+    print(worm)

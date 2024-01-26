@@ -1,0 +1,5 @@
+#S5_1543_문서 검색
+doc = input()
+f = input()
+cnt = doc.count(f)
+print(cnt)

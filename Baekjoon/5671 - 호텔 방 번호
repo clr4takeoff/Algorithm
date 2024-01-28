@@ -1,0 +1,16 @@
+#S5_5671_호텔 방 번호
+while True:
+  try:
+    cnt=0
+    n,m=map(int,input().split())
+
+    for i in range(n,m+1):
+      tmp=set(str(i))
+      
+      if len(tmp)==len(str(i)):
+        cnt+=1
+
+    print(cnt)
+
+  except EOFError:
+    break

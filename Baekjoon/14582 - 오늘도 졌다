@@ -1,0 +1,21 @@
+#S5_14582_오늘도 졌다
+w=list(map(int,input().split()))
+s=list(map(int,input().split()))
+
+a=False
+w_score=0
+s_score=0
+
+for i in range(9):
+  w_score+=w[i]
+
+  if w_score > s_score:
+    a=True
+    break
+  
+  s_score+=s[i]
+  
+if a==True:
+  print("Yes")
+else:
+  print("No")

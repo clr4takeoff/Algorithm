@@ -1,0 +1,9 @@
+#S5_9237_이장님 초대
+
+n=int(input())
+day=list(map(int,input().split()))
+day.sort(reverse=True)
+for i in range(n):
+    day[i] += i+1
+
+print(max(day)+1)

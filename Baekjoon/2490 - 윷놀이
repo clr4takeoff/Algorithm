@@ -1,0 +1,5 @@
+#B3_2490_윷놀이
+yoot = {0: "D", 1: "C", 2: "B", 3: "A", 4: "E"}
+for _ in range(3):
+    a = list(map(int, input().split()))
+    print(yoot[a.count(1)])

@@ -1,0 +1,4 @@
+#B2_15596_정수 N개의 합
+
+def solve(a):
+  return sum(a)

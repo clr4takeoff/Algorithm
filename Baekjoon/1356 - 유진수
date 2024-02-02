@@ -1,0 +1,24 @@
+#B1_1356_유진수
+n = list(input())  
+for i in range(len(n)):
+    n[i] = int(n[i])  
+
+k = False 
+
+for c in range(1, len(n)): 
+    a = 1
+    b = 1
+    
+    for i in range(c):
+        a *= n[i]
+    for j in range(c, len(n)):
+        b *= n[j]
+    
+    if a == b:
+        k = True
+        break
+
+if k:
+    print("YES")
+else:
+    print("NO")

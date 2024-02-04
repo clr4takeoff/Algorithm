@@ -1,0 +1,13 @@
+#B3_1598_꼬리를 무는 숫자 나열
+
+a,b=map(int,input().split())
+i=0
+j=0
+while a>0:
+  a-=4
+  i+=1
+while b>0:
+  b-=4
+  j+=1
+
+print(abs(i-j)+abs(a-b))

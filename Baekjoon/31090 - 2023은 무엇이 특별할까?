@@ -1,0 +1,9 @@
+#B4_31090_2023은 무엇이 특별할까?
+
+for i in range(int(input())):
+  n=input()
+  nn=list(n)
+  if (int(n)+1)%int(nn[-2]+nn[-1])==0:
+    print("Good")
+  else:
+    print("Bye")

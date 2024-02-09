@@ -1,0 +1,12 @@
+#B4_25377_빵
+
+t=[]
+for i in range(int(input())):
+  a,b=map(int,input().split())
+  if a<=b:
+    t.append(b)
+t.sort()
+if t:
+  print(t[0])
+else:
+  print(-1)

@@ -1,0 +1,13 @@
+#B4_13623_Zero or One
+
+a,b,c=map(int,input().split())
+
+if a==b and b==c:
+  print("*")
+else:
+  if a==b and b!=c:
+    print("C")
+  elif a==c and b!=c:
+    print("B")
+  else:
+    print("A")

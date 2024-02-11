@@ -1,0 +1,6 @@
+#B4_3765_Celebrity jeopardy
+
+import sys
+
+for line in sys.stdin:
+    print(line.strip())

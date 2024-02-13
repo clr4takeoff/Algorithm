@@ -1,0 +1,13 @@
+#S4_1302_베스트셀러
+book={}
+
+for i in range(int(input())):
+  s=input()
+  if s in book:
+    book[s]+=1
+  else:
+    book[s]=1
+
+b = sorted(book.items(), key=lambda x:(-x[1],x[0]))
+b=list(b)
+print(b[0][0])

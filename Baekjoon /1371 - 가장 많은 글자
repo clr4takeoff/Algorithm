@@ -1,0 +1,21 @@
+#B2_1371_가장 많은 글자
+
+chars = ""
+
+while True:
+    try:
+        line = input()
+        if line:
+            chars += line.replace(" ", "")
+    except EOFError:
+        break
+
+cnt = {}
+for c in chars:
+    cnt[c] = cnt.get(c, 0) + 1
+
+max_c = max(cnt.values())
+
+mc_chars = [c for c, n in cnt.items() if n == max_c]
+
+print("".join(sorted(mc_chars)))

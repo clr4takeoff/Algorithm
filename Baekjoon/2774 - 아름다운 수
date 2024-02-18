@@ -1,0 +1,5 @@
+#B2_2774_아름다운 수
+
+for _ in range(int(input())):
+  x=list(input())
+  print(len(set(x)))

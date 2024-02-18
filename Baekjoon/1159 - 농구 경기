@@ -1,0 +1,21 @@
+#B2_1159_농구 경기
+
+n=[]
+res=[]
+for _ in range(int(input())):
+  n.append(list(input())[0])
+
+s=set(n)
+cnt=0
+
+for i in s:
+  if n.count(i)<5:
+    cnt+=1
+  else:
+    res.append(i)
+
+if cnt==len(s):
+  print("PREDAJA")
+else:
+  res.sort()
+  print("".join(res))

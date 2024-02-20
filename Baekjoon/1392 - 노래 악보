@@ -1,0 +1,14 @@
+#B2_1392_노래 악보
+
+note=[]
+
+n,q=map(int,input().split())
+
+for i in range(n):
+  k=int(input())
+  for j in range(k):
+    note.append(i+1)
+
+for i in range(q):
+  time=int(input())
+  print(note[time])

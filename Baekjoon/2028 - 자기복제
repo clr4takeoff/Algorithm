@@ -1,0 +1,11 @@
+for _ in range(int(input())):
+  n=int(input())
+  nn=n**2
+  res=""
+  for i in range(len(list(str(n)))):
+    res+=str((str(nn)[-len(str(n))+i]))
+  
+  if res==str(n):
+    print("YES")
+  else:
+    print("NO")

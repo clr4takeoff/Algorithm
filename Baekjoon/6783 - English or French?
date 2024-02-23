@@ -1,0 +1,14 @@
+#B2_6783_English or French?
+
+s_count=0
+t_count=0
+for _ in range(int(input())):
+  n=input()
+  n=n.lower()
+  s_count+=n.count("s")
+  t_count+=n.count("t")
+
+if s_count >= t_count:
+  print("French")
+else:
+  print("English")

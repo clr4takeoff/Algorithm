@@ -1,0 +1,5 @@
+#B4_15610_Abbey Courtyard
+import math
+
+n=int(input())
+print((math.sqrt(n))*4)

@@ -1,0 +1,16 @@
+#B2_4613_Quicksum
+
+while True:
+  a=input()
+  if a=="#":
+    break
+  else:
+    li=list(a)
+    res=0
+    for i in range(len(li)):
+      if li[i]==" ":
+        k=64
+      else:
+        k=ord(li[i])
+      res+=(k-64)*(i+1)
+    print(res)

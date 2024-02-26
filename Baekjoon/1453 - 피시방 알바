@@ -1,0 +1,9 @@
+#B2_1453_피시방 알바
+
+n=int(input())
+a=list(map(int,input().split()))
+
+if len(set(a))==len(a):
+  print(0)
+else:
+  print(len(a)-len(set(a)))

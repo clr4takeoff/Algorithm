@@ -1,0 +1,17 @@
+#B4_16199_나이 계산하기
+
+y1, m1, d1 = map(int, input().split())
+y2, m2, d2 = map(int, input().split())
+
+if m1 < m2 or (m1 == m2 and d1 <= d2):
+    year1 = y2 - y1
+else:
+    year1 = y2 - y1 - 1
+
+year2 = y2 - y1 + 1
+
+year3 = y2 - y1
+
+print(year1)
+print(year2)
+print(year3)

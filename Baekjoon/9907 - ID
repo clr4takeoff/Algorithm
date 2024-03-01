@@ -1,0 +1,12 @@
+#B3_9907_ID
+
+a=list(input())
+weight=[2,7,6,5,4,3,2]
+nice=0
+
+for i in range(7):
+  nice += weight[i] * int(a[i])
+
+dic = {0:"J", 1:"A", 2:"B", 3:"C", 4:"D", 5:"E", 6:"F", 7:"G", 8:"H", 9:"I", 10:"Z"}
+
+print(dic[nice%11])

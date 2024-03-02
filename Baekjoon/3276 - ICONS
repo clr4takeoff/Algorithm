@@ -1,0 +1,17 @@
+#B3_3276_ICONS
+
+def btf(n):
+    min_sum = float('inf')
+    optimal_row, optimal_col = 0, 0
+
+    for row in range(1, n + 1):
+        col = (n + row - 1) // row
+
+        if row + col < min_sum:
+            min_sum = row + col
+            optimal_row, optimal_col = row, col
+
+    return str(optimal_col), str(optimal_row)
+    
+a=btf(int(input()))
+print(" ".join(a))

@@ -1,0 +1,13 @@
+# S5_5347_LCM
+# 유클리드 호제법
+
+def lcm(a,b):
+  m=a*b
+  while b!=0:
+    a,b = b,a%b
+
+  return m//a
+
+for i in range(int(input())):
+  a,b=map(int,input().split())
+  print(lcm(a,b)) 

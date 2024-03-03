@@ -1,0 +1,26 @@
+#B2_1864_문어 숫자
+
+d={
+    '-': 0,
+    '\\': 1,
+    '(': 2,
+    '@': 3,
+    '?': 4,
+    '>': 5,
+    '&': 6,
+    '%': 7,
+    '/': -1
+}
+
+
+while True:
+  a=list(input())
+  sum=0
+
+  if a[0]=="#":
+    break
+  else:
+    for i in range(len(a)-1,-1,-1):
+      sum+=d[a[len(a)-1-i]]*(8**i)
+
+  print(sum)

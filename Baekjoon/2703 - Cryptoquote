@@ -1,0 +1,18 @@
+#B2_2703_Cryptoquote
+
+for _ in range(int(input())):
+  s=list(input())
+  rule=list(input())
+  d={}
+  w=[]
+
+  for i in range(26):
+    d[chr(65+i)] = rule[i]
+
+  for i in range(len(s)):
+    if s[i]==" ":
+      w.append(" ")
+    else:
+      w.append(d[s[i]])
+
+  print("".join(w))

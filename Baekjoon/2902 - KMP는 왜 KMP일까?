@@ -1,0 +1,8 @@
+#B2_2902_KMP는 왜 KMP일까?
+
+s=list(input())
+res=[]
+for i in range(len(s)):
+  if 64<ord(s[i])<91:
+    res.append(s[i])
+print("".join(res))

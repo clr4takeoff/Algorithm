@@ -1,0 +1,10 @@
+#B2_2145_숫자 놀이
+
+while True:
+  n=int(input())
+  if n==0:
+    break
+  else:
+    while len(str(n)) > 1:
+      n = sum(int(digit) for digit in str(n))
+    print(n)

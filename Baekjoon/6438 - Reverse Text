@@ -1,0 +1,6 @@
+#B3_6438_Reverse Text
+
+for i in range(int(input())):
+  a=list(input())
+  a.reverse()
+  print("".join(a))

@@ -1,0 +1,12 @@
+#B3_2857_FBI
+
+fbi=[]
+for i in range(5):
+  a=input()
+  if a.find('FBI') != -1:
+    fbi.append(str(i+1))
+
+if len(fbi)>0:
+  print(" ".join(fbi))
+else:
+  print("HE GOT AWAY")

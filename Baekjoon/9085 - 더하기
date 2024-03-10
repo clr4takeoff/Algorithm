@@ -1,0 +1,6 @@
+#B3_9085_더하기
+
+for _ in range(int(input())):
+  n=input()
+  a=list(map(int,input().split()))
+  print(sum(a))

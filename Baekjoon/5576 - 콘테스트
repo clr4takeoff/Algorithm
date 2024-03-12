@@ -1,0 +1,12 @@
+#B2_5576_콘테스트
+
+def con(a):
+  for i in range(10):
+    a.append(int(input()))
+  a.sort(reverse=True)
+  res=a[0]+a[1]+a[2]
+  return res
+w=[]
+k=[]
+
+print(con(w), con(k))

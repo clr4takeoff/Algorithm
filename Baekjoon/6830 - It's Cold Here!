@@ -1,0 +1,12 @@
+#B3_6830_It's Cold Here!
+
+cold=[]
+while True:
+  a,b=input().split()
+  cold.append([a,int(b)])
+
+  if a=="Waterloo":
+    break
+
+cold.sort(key=lambda x: x[1])
+print(cold[0][0])

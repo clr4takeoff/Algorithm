@@ -1,0 +1,16 @@
+#S5_3982_Soccer Bets
+
+def win(matches):
+    results = {}
+    for match in matches:
+        team1, team2, score1, score2 = match
+        score1, score2 = int(score1), int(score2)
+        winner = team1 if score1 > score2 else team2
+        results[winner] = results.get(winner, 0) + 1
+
+    return max(results, key=results.get)
+
+t = int(input())
+for _ in range(t):
+    matches = [input().split() for _ in range(16)]
+    print(win(matches))

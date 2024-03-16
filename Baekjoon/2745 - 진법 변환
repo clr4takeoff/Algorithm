@@ -1,0 +1,11 @@
+#B2_2745_진법 변환
+
+n,b=input().split()
+a=list(n[::-1])
+res=0
+for i in range(len(a)):
+  if 64<ord(a[i])<91:
+    res+=(ord(a[i])-55)*(int(b)**i)
+  else:
+    res+=int(a[i])*(int(b)**i)
+print(res)

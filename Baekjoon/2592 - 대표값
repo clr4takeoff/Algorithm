@@ -1,0 +1,16 @@
+#B2_2592_대표값
+
+li=[]
+b=[]
+
+for i in range(10):
+  a=int(input())
+  li.append(a)
+
+for i in range(10):
+  b.append((li.count(li[i]),li[i]))
+
+b.sort(reverse=True)
+
+print(sum(li)//len(li))
+print(b[0][1])

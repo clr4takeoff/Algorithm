@@ -1,0 +1,5 @@
+#B2_2355_시그마
+
+a,b=map(int,input().split())
+a,b=max(a,b),min(a,b)
+print((a+b)*(a-b+1)//2)

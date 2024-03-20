@@ -1,0 +1,8 @@
+#B2_15813_너의 이름은 몇 점이니?
+
+a=int(input())
+b=list(input())
+score=0
+for i in range(a):
+  score+=ord(b[i])-64
+print(score)

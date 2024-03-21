@@ -1,0 +1,9 @@
+#B2_5026_박사 과정
+
+for i in range(int(input())):
+  a=input()
+  if a=="P=NP":
+    print("skipped")
+  else:
+    b,c=map(int,a.split("+"))
+    print(b+c)  

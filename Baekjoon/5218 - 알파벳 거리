@@ -1,0 +1,17 @@
+#B2_5218_알파벳 거리
+
+for i in range(int(input())):
+  x,y=map(str,input().split())
+  xx=list(x)
+  yy=list(y)
+
+  print("Distances: ",end="")
+
+  for j in range(len(xx)):
+    r=ord(yy[j])-ord(xx[j])
+
+    if r>=0:
+      print(str(r)+" ", end="")
+    else:
+      print(str(r+26)+" ", end="")
+  print()

@@ -1,0 +1,9 @@
+#B3_2953_나는 요리사다
+
+p=[]
+for i in range(5):
+  p.append((sum(list(map(int,input().split()))),i+1))
+
+p.sort(reverse = True)
+
+print(p[0][1], p[0][0])

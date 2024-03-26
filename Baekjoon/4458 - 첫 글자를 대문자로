@@ -1,0 +1,6 @@
+#B3_4458_첫 글자를 대문자로
+
+for _ in range(int(input())):
+  a=list(input())
+  a[0]=a[0].upper()
+  print("".join(a))

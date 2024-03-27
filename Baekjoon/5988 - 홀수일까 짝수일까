@@ -1,0 +1,8 @@
+#B3_5988_홀수일까 짝수일까
+
+for i in range(int(input())):
+  n=int(input())
+  if n%2==0:
+    print("even")
+  else:
+    print("odd")

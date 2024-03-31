@@ -1,0 +1,36 @@
+#B3_3058_짝수를 찾아라
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    static ArrayList<Integer> list = new ArrayList<>();
+
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int test = Integer.parseInt(br.readLine()); // readline() -> throws Exception
+
+        for (int i = 0; i < test; i++) {
+            int sum = 0;
+            int tmp = 100;
+
+            StringTokenizer st = new StringTokenizer(br.readLine()," ");
+            while (st.hasMoreTokens()) { // hasMoreTokens()
+                int a = Integer.parseInt(st.nextToken());
+                if (a % 2 == 0) {
+                    list.add(a);
+                }
+            }
+
+            for (int k=0; k<list.size(); k++) {
+                sum+= list.get(k);
+                if (tmp>list.get(k)) {
+                    tmp=list.get(k);
+                }
+            }
+
+            System.out.printf("%d %d\n", sum, tmp);
+            list.clear();
+        }
+    }
+}

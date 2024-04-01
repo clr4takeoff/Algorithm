@@ -1,0 +1,38 @@
+#B2_4597_패리티
+
+import java.io.*;
+
+public class Main {
+    public Main() {
+    }
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        while(true) {
+            String input = br.readLine();
+            if (input.equals("#")) {
+                return;
+            }
+            parity(String.valueOf((input.charAt(input.length()-1))),input);
+        }
+    }
+
+    public static void parity(String c, String a) {
+        a=a.substring(0,a.length()-1);
+        int cnt = (int) a.chars().filter(i->String.valueOf((char) i).equals("1")).count();
+        if (cnt % 2 == 0) {
+            if (c.equals("e")) {
+                a+="0";
+            } else {
+                a+="1";
+            }
+        } else if (c.equals("e")) {
+            a+="1";
+        } else {
+            a+="0";
+        }
+
+        System.out.println(a);
+    }
+}

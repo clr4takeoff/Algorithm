@@ -1,0 +1,12 @@
+#B4_5543_상근날드
+ham=2000
+liq=2000
+for _ in range(3):
+  a=int(input())
+  if ham>a:
+    ham=a
+for _ in range(2):
+  a=int(input())
+  if liq>a:
+    liq=a 
+print(ham+liq-50)

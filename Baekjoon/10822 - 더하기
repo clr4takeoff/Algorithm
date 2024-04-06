@@ -1,0 +1,4 @@
+#B2_10822_더하기
+
+li=list(map(int,input().split(",")))
+print(sum(li))

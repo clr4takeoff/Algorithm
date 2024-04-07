@@ -1,0 +1,15 @@
+#B2_3062_수 뒤집기
+
+for i in range(int(input())):
+  n=input()
+  nli=list(n)
+  nli.reverse()
+  m=int(n)+int("".join(nli))
+
+  mli=list(str(m))
+  mli.reverse()
+
+  if str(m)=="".join(mli):
+    print("YES")
+  else:
+    print("NO")

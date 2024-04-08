@@ -1,0 +1,13 @@
+#B3_3047_ABC
+
+a,b,c=map(int,input().split())
+
+li=[a,b,c]
+li.sort()
+
+a=list(input())
+for i in range(3):
+  a[i]=ord(a[i])-65
+
+for i in range(3):
+  print(li[a[i]], end=" ")

@@ -1,0 +1,10 @@
+#B2_2789_유학 금지
+
+li=list("CAMBRIDGE")
+a=input()
+
+for i in list(a):
+  if i in li:
+    a=a.replace(i,"")
+
+print(a)

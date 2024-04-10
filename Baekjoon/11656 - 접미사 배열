@@ -1,0 +1,12 @@
+#S4_11656_접미사 배열
+
+s=input()
+word=[]
+
+for i in range(len(s)):
+  word.append(s[i:])
+
+word.sort()
+
+for i in range(len(word)):
+  print(word[i])

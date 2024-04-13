@@ -1,0 +1,16 @@
+#B3_4084_Viva la Diferencia
+
+while True:
+    a=list(map(int,input().split()))
+
+    if sum(a)==0:
+        break
+
+    cnt=0
+
+    while len(set(a)) != 1:
+        tmp=[abs(a[0]-a[1]), abs(a[1]-a[2]), abs(a[2]-a[3]), abs(a[3]-a[0])]
+        a=tmp[:]
+        cnt+=1
+
+    print(cnt)

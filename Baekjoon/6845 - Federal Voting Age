@@ -1,0 +1,20 @@
+#B3_6845_Federal Voting Age
+
+y=2007
+m=2
+d=27
+
+n=int(input())
+
+for _ in range(n):
+    a,b,c= map(int,input().split())
+
+    if y-a >18:
+        print("Yes")
+    elif y-a == 18:
+        if b<m or (b==m and c<=d):
+            print("Yes")
+        else:
+            print("No")
+    else:
+        print("No")

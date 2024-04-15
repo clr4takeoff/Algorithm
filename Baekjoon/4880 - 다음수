@@ -1,0 +1,16 @@
+#B3_4880_다음수
+
+while True:
+  a,b,c=map(int,input().split())
+  if a==0 and b==0 and c==0:
+    break
+
+  else:
+    d=b-a
+    if a!=0:
+      r=b//a
+
+    if c-b==d:
+      print("AP", c+d)
+    else:
+      print("GP", c*r)

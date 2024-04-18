@@ -1,0 +1,13 @@
+#B4_6810_ISBN
+
+a=list(map(int,"9780921418"))
+
+for _ in range(3):
+  a.append(int(input()))
+
+for i in range(13):
+  if i%2!=0:
+    a[i]*=3
+
+
+print(f"The 1-3-sum is {sum(a)}")

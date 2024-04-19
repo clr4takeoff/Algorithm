@@ -1,0 +1,6 @@
+#B3_9306_Practice: Roll Call
+
+for i in range(int(input())):
+  a=input()
+  b=input()
+  print(f"Case {i+1}: {b}, {a}")

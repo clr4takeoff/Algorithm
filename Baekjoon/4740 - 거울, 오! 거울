@@ -1,0 +1,10 @@
+#B3_4740_거울, 오! 거울
+
+while True:
+  a=input()
+  if a=="***":
+    break
+  else:
+    ali=list(a)
+    ali.reverse()
+    print("".join(ali))

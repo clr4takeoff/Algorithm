@@ -1,0 +1,15 @@
+#B4_9782_Median
+
+i=1
+while True:
+  a=list(map(int,input().split()))
+  if a[0]==0:
+    break
+  else:
+    n=a.pop(0) 
+    if n%2 == 0: 
+      m=(a[n//2-1]+a[n//2])/2
+    else:
+       m=a[n//2]
+    print(f"Case {i}: {m:.1f}")
+  i+=1

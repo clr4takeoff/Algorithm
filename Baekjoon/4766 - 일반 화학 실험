@@ -1,0 +1,13 @@
+#B3_4766_일반 화학 실험
+
+tmp=999
+while True:
+  a=float(input())
+  if a==999:
+    break
+  else:
+    if tmp==999:
+      tmp=a
+    else:
+      print("{:.2f}".format(a-tmp))
+      tmp=a

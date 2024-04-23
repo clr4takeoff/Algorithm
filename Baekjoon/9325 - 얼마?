@@ -1,0 +1,8 @@
+#B3_9325_얼마?
+
+for _ in range(int(input())):
+  n=int(input())
+  for i in range(int(input())):
+    a,b=map(int,input().split())
+    n+=a*b
+  print(n)

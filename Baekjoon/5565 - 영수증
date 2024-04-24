@@ -1,0 +1,6 @@
+#B3_5565_영수증
+
+a=int(input())
+for _ in range(9):
+  a-=int(input())
+print(a)

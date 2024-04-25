@@ -1,0 +1,9 @@
+#B3_2712_미국 스타일
+
+d={"kg":2.2046, "lb":0.4536, "l":0.2642, "g":3.7854}
+s={"kg":"lb", "lb":"kg", "l":"g", "g":"l"}
+
+for _ in range(int(input())):
+    a,b=input().split()
+    res=round(float(a)*d[b],4)
+    print(f"{res:.4f} {s[b]}")

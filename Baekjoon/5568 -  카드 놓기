@@ -1,0 +1,21 @@
+#S4_5568_카드 놓기
+
+from itertools import permutations, combinations
+
+def func(cards, k):
+    res = set()
+    for c in combinations(cards, k):
+        for p in permutations(c):
+            num = ''.join(map(str, p))
+            res.add(num)
+    return res
+
+n = int(input())
+k = int(input())
+cards = []
+
+for _ in range(n):
+    cards.append(input())
+
+res = func(cards, k)
+print(len(res))

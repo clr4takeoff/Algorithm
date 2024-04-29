@@ -1,0 +1,18 @@
+#S5_1475_방 번호
+
+import math
+
+n=input()
+count={str(i):0 for i in range(10)}
+
+for digit in n:
+    if digit=='9':
+        count['6'] += 1
+    else:
+        count[digit] += 1
+
+count['6']=math.ceil(count['6']/2)
+
+max_sets=max(count.values())
+
+print(max_sets)

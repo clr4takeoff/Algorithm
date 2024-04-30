@@ -1,0 +1,16 @@
+#B4_11257_IT Passport Examination
+
+for _ in range(int(input())):
+    exam_id, score1, score2, score3 = map(int, input().split())
+
+    total_score = score1 + score2 + score3
+    min_score1 = 35 * 0.3
+    min_score2 = 25 * 0.3
+    min_score3 = 40 * 0.3
+
+    if total_score >= 55 and score1 >= min_score1 and score2 >= min_score2 and score3 >= min_score3:
+        result = "PASS"
+    else:
+        result = "FAIL"
+
+    print(exam_id, total_score, result)

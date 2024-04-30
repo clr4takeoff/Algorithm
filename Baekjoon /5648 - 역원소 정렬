@@ -1,0 +1,29 @@
+#S5_5648_역원소 정렬
+
+li=[]
+a=list(map(int,input().split()))
+n=a[0]
+
+
+for i in range(len(a)):
+  if i!=0:
+    a[i]=list(str(a[i]))
+    a[i].reverse()
+    a[i]="".join(a[i])
+    li.append(int(a[i]))
+
+
+
+while (len(li)<n):
+  a=list(map(int,input().split()))
+  for i in range(len(a)):
+    a[i]=list(str(a[i]))
+    a[i].reverse()
+    a[i]="".join(a[i])
+    li.append(int(a[i]))
+
+
+li.sort()
+
+for i in range(len(li)):
+  print(li[i])

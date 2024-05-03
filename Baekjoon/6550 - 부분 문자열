@@ -1,0 +1,21 @@
+#S5_6550_부분 문자열
+
+while True:
+    try:
+        s, t = input().split()
+
+        index_s = 0
+        index_t = 0
+
+        while index_t < len(t) and index_s < len(s):
+            if t[index_t] == s[index_s]:
+                index_s += 1
+            index_t += 1
+
+        if index_s == len(s):
+            print("Yes")
+        else:
+            print("No")
+        
+    except EOFError:
+        break

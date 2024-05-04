@@ -1,0 +1,16 @@
+#B1_2204_도비의 난독증 테스트
+
+while True:
+  n=int(input())
+  a={}
+  
+  if n==0:
+    break
+  else:
+    for i in range(n):
+      k=input()
+      a[k] = k.lower()
+
+    b=sorted(a.items(), key=lambda x: x[1])
+    c={v:k for k,v in a.items()}
+    print(c.get(b[0][1]))

@@ -1,0 +1,15 @@
+#S5_11931_수 정렬하기
+
+import sys
+
+input=sys.stdin.readline
+
+a=[]
+
+for i in range(int(input())):
+  a.append(int(input()))
+
+a.sort(reverse=True)
+
+for i in range(len(a)):
+  print(a[i])

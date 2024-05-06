@@ -1,0 +1,12 @@
+#B4_10987_모음의 개수
+
+a=input()
+s=["a","e","i","o","u"]
+cnt=0
+
+for i in list(a):
+  for j in s:
+    if i==j:
+      cnt+=1
+
+print(cnt)

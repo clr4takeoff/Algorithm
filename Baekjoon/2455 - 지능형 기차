@@ -1,0 +1,12 @@
+#B3_2455_지능형 기차
+
+max=0
+tmp=0
+
+for i in range(4):
+  a,b=map(int,input().split())
+  tmp=tmp-a+b
+  if max<tmp:
+    max=tmp
+
+print(max)

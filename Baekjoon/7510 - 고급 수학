@@ -1,0 +1,11 @@
+#B3_7510_고급 수학
+
+for i in range(int(input())):
+  ra="no"
+  a=list(map(int,input().split()))
+  a.sort()
+  
+  if a[2]**2==a[0]**2+a[1]**2:
+    ra="yes"
+
+  print(f"Scenario #{i+1}:\n{ra}\n")

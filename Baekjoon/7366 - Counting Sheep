@@ -1,0 +1,7 @@
+#B2_7366_Counting Sheep
+
+for i in range(int(input())):
+  a=int(input())
+  li=list(map(str,input().split()))
+  cnt=li.count("sheep")
+  print(f"Case {i+1}: This list contains {cnt} sheep.\n")

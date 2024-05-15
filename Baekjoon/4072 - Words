@@ -1,0 +1,15 @@
+#B2_4072_Words
+
+while True:
+  n=input()
+
+  if n=="#":
+    break
+
+  else:
+    n=list(map(str,n.split()))
+
+    for i in n:
+      i=i[::-1]
+
+      print("".join(i)+" ", end="")

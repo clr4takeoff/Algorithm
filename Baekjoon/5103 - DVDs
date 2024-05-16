@@ -1,0 +1,25 @@
+#B2_5103_DVDs
+
+while True:
+  dvd=input()
+
+  if dvd=="#":
+    break
+
+  m,s=map(int,input().split())
+
+  for i in range(int(input())):
+    a,b=map(str,input().split())
+
+    if a=="S":
+      if s-int(b)>=0:
+        s-=int(b)
+      else:
+        s=0
+    else:
+      if s+int(b)<=m:
+        s+=int(b)
+      else:
+        s=m
+
+  print(dvd, s)

@@ -1,0 +1,15 @@
+#B4_15059_Hard choice
+
+a,b,c=map(int,input().split())
+d,e,f=map(int,input().split())
+
+s=0
+
+l1=[a,b,c]
+l2=[d,e,f]
+
+for i in range(3):
+  if l1[i]-l2[i]<0:
+    s+=l2[i]-l1[i]
+
+print(s)

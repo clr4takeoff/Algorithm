@@ -1,0 +1,14 @@
+#B3_6784_Multiple Choice
+
+n=int(input())
+s=[]
+c=0
+
+for i in range(n):
+  s.append(input())
+
+for i in range(n):
+  if s[i]==input():
+    c+=1
+  
+print(c)

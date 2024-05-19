@@ -1,0 +1,11 @@
+#B3_4806_줄 세기
+
+cnt=0
+while True:
+  try:
+    a=input()
+    cnt+=1
+
+  except:
+    print(cnt)
+    break

@@ -1,0 +1,4 @@
+#B3_9713_Sum of Odd Sequence
+
+for i in range(int(input())):
+  print((int(input())//2+1)**2)

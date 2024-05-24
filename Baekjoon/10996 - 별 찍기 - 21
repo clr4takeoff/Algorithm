@@ -1,0 +1,9 @@
+#B2_10996_별 찍기 - 21
+
+n=int(input())
+
+l1 = "".join("*" if i%2==0 else " " for i in range(n))
+l2 = "".join(" " if i%2==0 else "*" for i in range(n))
+
+for i in range(n*2):
+    print(l1 if i%2==0 else l2)

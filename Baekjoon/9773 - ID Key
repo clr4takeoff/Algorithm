@@ -1,0 +1,23 @@
+#B3_9773_ID Key
+
+for i in range(int(input())):
+    n=int(input())
+    s=list(str(n))
+    s.reverse()
+    ss=sum(int(digit) for digit in s)
+
+    while len(s)<3:
+        s.append('0')
+
+    t=[s[2],s[1],s[0]]
+    tt=int("".join(t))*10
+
+    tmp=tt+ss
+    id=tmp%10000
+
+    if tmp<1000:
+        id=str(tmp+1000).zfill(4)
+    else:
+        id=str(id).zfill(4)
+
+    print(id)

@@ -1,0 +1,6 @@
+#B3_10991_별 찍기 - 16
+
+n=int(input())
+for i in range(n):
+  print(" "*(n-1-i),end="")
+  print("* "*(i+1))

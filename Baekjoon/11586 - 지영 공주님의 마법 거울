@@ -1,0 +1,20 @@
+#B3_11586_지영 공주님의 마법 거울
+
+mir=[]
+for i in range(int(input())):
+  mir.append(input())
+
+state=int(input())
+if state==1:
+  for i in range(len(mir)):
+    print(mir[i])
+
+elif state==2:
+  for i in range(len(mir)):
+    mir[i]=mir[i][::-1]
+    print(mir[i])
+
+else:
+  mir.reverse()
+  for i in range(len(mir)):
+    print(mir[i])

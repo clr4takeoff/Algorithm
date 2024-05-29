@@ -1,0 +1,15 @@
+#B3_2997_네 번째 수
+
+a=list(map(int,input().split()))
+a.sort()
+
+d1=a[1]-a[0]
+d2=a[2]-a[1]
+
+if d1==d2:
+  print(a[2]+d1)
+else:
+  if d1>d2:
+    print(a[0]+d2)
+  else:
+    print(a[1]+d1)

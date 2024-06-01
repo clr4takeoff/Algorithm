@@ -1,0 +1,13 @@
+#B3_14656_조교는 새디스트야!!
+
+cnt=0
+p=[]
+n=int(input())
+a=list(map(int,input().split()))
+
+for i in range(n):
+  p.append(i+1)
+  if p[i]!=a[i]:
+    cnt+=1
+
+print(cnt)

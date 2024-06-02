@@ -1,0 +1,12 @@
+#B3_6321_IBM 빼기 1
+
+for i in range(int(input())):
+  s=list(input())
+
+  for j in range(len(s)):
+    if s[j]=="Z":
+      s[j]="A"
+    else:
+      s[j]=chr(ord(s[j])+1)
+
+  print(f"String #{i+1}\n{str().join(s)}\n")

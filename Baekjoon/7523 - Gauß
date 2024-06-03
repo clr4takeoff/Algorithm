@@ -1,0 +1,6 @@
+#B3_7523_Gauß
+
+for i in range(int(input())):
+  a,b=map(int,input().split())
+  s=(a+b)*(b-a+1)//2
+  print(f"Scenario #{i+1}:\n{s}\n")

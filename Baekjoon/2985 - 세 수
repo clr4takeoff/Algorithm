@@ -1,0 +1,20 @@
+#B3_2985_세 수
+
+a,b,c=map(int,input().split())
+pos=0
+if c>b:
+  pos=1
+
+if a+b==c or a==b+c:
+  op="+"
+elif a-b==c or a==b-c:
+  op="-"
+elif a//b==c or a==b//c:
+  op="/"
+elif a*b==c or a==b*c:
+  op="*"
+
+if pos==1:
+  print(f"{a}{op}{b}={c}")
+else:
+  print(f"{a}={b}{op}{c}")

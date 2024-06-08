@@ -1,0 +1,12 @@
+#B4_27110_특식 배부
+
+def ck(n,a,b,c):
+    fr=min(n,a)
+    sy=min(n,b)
+    se=min(n,c)  
+    res=fr+sy+se 
+    return res
+
+n=int(input())
+a,b,c=map(int,input().split())
+print(ck(n,a,b,c))

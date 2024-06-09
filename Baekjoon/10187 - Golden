@@ -1,0 +1,13 @@
+#B3_10187_Golden
+
+tol=0.01
+phi=1.61803399
+
+for _ in range(int(input())):
+    x,y= map(float,input().split())
+    r1=x/y
+    r2=y/x
+    if abs(r1-phi)<=phi*tol or abs(r2-phi)<=phi*tol:
+        print("golden")
+    else:
+        print("not")

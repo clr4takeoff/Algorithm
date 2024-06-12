@@ -1,4 +1,4 @@
-#B2_6812_Good times
+#B3_6812_Good times
 
 x,y,n=map(int,input().split())
 

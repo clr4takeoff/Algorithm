@@ -1,0 +1,8 @@
+#B3_14909_양수 개수 세기
+
+cnt=0
+a=list(map(int,input().split()))
+for i in a:
+  if i>0:
+    cnt+=1
+print(cnt)

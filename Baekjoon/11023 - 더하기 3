@@ -1,0 +1,4 @@
+#B3_11023_더하기 3
+
+a=list(map(int,input().split()))
+print(sum(a))

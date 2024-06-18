@@ -1,0 +1,6 @@
+#B3_20053_최소, 최대 2
+
+for i in range(int(input())):
+  a=input()
+  li=list(map(int,input().split()))
+  print(min(li), max(li))

@@ -1,0 +1,6 @@
+#B5_15232_Rectangles
+
+r=int(input())
+c=int(input())
+for _ in range(r):
+  print("*"*c)

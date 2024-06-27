@@ -1,0 +1,25 @@
+#S5_2740_행렬 곱셈
+
+def mat(n,m):
+  A=[]
+  for i in range(n):
+    a=list(map(int,input().split()))
+    A.append(a)
+  return A
+
+n,m=map(int,input().split())
+A=mat(n,m)
+
+m,k=map(int,input().split())
+B=mat(m,k)
+
+C=[[0]*k for i in range(n)]
+
+for i in range(n):
+  for j in range(k):
+    for l in range(m):
+      C[i][j]+=A[i][l]*B[l][j]
+    C[i][j]=str(C[i][j])
+
+for i in range(n):
+  print(" ".join(C[i]))

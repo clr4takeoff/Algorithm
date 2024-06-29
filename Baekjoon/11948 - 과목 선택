@@ -1,0 +1,15 @@
+#B4_11948_과목 선택
+
+s=[]
+for i in range(4):
+  s.append(int(input()))
+s.sort(reverse=True)
+a=sum(s)-s[-1]
+
+s=[]
+for i in range(2):
+  s.append(int(input()))
+s.sort()
+b=s[1]
+
+print(a+b)

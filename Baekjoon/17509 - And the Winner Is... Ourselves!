@@ -1,0 +1,16 @@
+#S5_17509_And the Winner Is... Ourselves!
+
+c=0
+p=0
+li=[]
+for _ in range(11):
+  d,v=map(int,input().split())
+  li.append([d,v])
+
+li.sort(key=lambda x: (x[0],-x[1]))
+  
+for d,v in li:
+  c+=d
+  p+=c+20*v
+ 
+print(p)

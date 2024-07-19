@@ -34,7 +34,6 @@ def shortcut(n,m,grid):
     
 n,m=map(int,input().split())
 grid=[]
-idx=2
 for i in range(n):
   grid.append(list(map(int,input().split())))
 

@@ -1,0 +1,6 @@
+#B5_22193_Multiply
+
+d=input()
+a=int(input())
+b=int(input())
+print(a*b)

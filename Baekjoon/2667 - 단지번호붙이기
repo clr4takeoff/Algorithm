@@ -1,0 +1,46 @@
+#S1_2667_단지번호붙이기
+
+from collections import deque
+
+def bfs(visited,i,j,n,a):
+  qu=deque()
+  qu.append([i,j])
+  size=1
+  visited[i][j]=True
+
+  while qu:
+    y,x=qu.popleft()
+
+    for dy,dx in [[0,1],[1,0],[-1,0],[0,-1]]:
+      ny,nx=y+dy,x+dx
+      
+      if 0<=ny<n and 0<=nx<n and not visited[ny][nx] and a[ny][nx]=="1":
+        visited[ny][nx]=True
+        qu.append([ny,nx])
+        size+=1
+
+  return size
+
+
+def numbering(n,a):
+  visited=[[False]*n for _ in range(n)]
+  res=[]
+
+  for i in range(n):
+    for j in range(n):
+      if not visited[i][j] and a[i][j]=="1":
+        res.append(bfs(visited,i,j,n,a))
+
+  return res
+
+a=[]
+n=int(input())
+for _ in range(n):
+  a.append(list(input()))
+
+res=numbering(n,a)
+
+res.sort()
+print(len(res))
+for i in res:
+  print(i)

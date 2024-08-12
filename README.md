@@ -1,6 +1,6 @@
 # Algorithm
 
-### 👩‍💻 하루 하나씩 알고리즘 문제 풀기<br/><br/>
+### 👩‍💻 하루 하나씩 알고리즘 문제 풀기 🌱<br/><br/>
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=Python&logoColor=white"/>
 

@@ -1,0 +1,5 @@
+#B5_31614_分 (Minutes)
+
+h=int(input())
+m=int(input())
+print(h*60+m)

@@ -1,0 +1,6 @@
+#B4_17874_Piece of Cake!
+
+n,h,v=map(int,input().split())
+a=max(n-h,h)
+b=max(n-v,v)
+print(a*b*4)

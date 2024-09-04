@@ -1,0 +1,20 @@
+#S2_15663_N과 M (9)
+
+def f(n,m,a,s,li,used):
+  if len(li)==m:
+    print(" ".join(map(str,li)))
+    return
+
+  prev=-1
+  for i in range(n):
+    if prev!=a[i] and not used[i]:
+      used[i]=True
+      f(n,m,a,i+1,li+[a[i]],used)
+      used[i]=False
+      prev=a[i]
+
+n,m=map(int,input().split())
+a=list(map(int,input().split()))
+a.sort()
+used=[False]*n
+f(n,m,a,0,[],used)
